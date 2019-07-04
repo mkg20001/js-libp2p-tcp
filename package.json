@@ -10,7 +10,9 @@
     "release-minor": "aegir release -t node --type minor --no-build",
     "release-major": "aegir-release -t node --type major --no-build",
     "coverage": "aegir coverage",
-    "coverage-publish": "aegir coverage --provider coveralls"
+    "coverage-publish": "aegir coverage --provider coveralls",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "pre-commit": [
     "lint",
@@ -51,7 +53,8 @@
     "mafmt": "^3.0.2",
     "multiaddr": "^3.0.2",
     "once": "^1.4.0",
-    "stream-to-pull-stream": "^1.7.2"
+    "stream-to-pull-stream": "^1.7.2",
+    "snyk": "^1.189.0"
   },
   "contributors": [
     "Alan Shaw <alan@tableflip.io>",
@@ -64,5 +67,6 @@
     "Prashanth Chandra <coolshanth94@gmail.com>",
     "Richard Littauer <richard.littauer@gmail.com>",
     "Stephen Whitmore <stephen.whitmore@gmail.com>"
-  ]
+  ],
+  "snyk": true
 }
